@@ -10,7 +10,27 @@ using std::endl;
 
 int main( void )
 {
-    // TODO: Adicione seu código aqui. 
+    int m;
+    int n;
+    int r;
+
+    std::cin >> std::ws >> m;
+    std::cin >> std::ws >> n;
+    r = m;
+
+    while(n != 0) {
+        if(n > 0) {
+            m = m + 1;
+            r = r + m;
+            n = n - 1;
+        } else {
+            m = m - 1;
+            r = r + m;
+            n = n + 1;
+        }
+    }
+
+    std::cout << r << '\n';
 
     return 0;
 }

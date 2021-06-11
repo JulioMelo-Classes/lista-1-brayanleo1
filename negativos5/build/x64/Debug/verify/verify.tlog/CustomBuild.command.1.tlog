@@ -1,0 +1,20 @@
+^C:\USERS\BRAYAN\DESKTOP\BRAYAN\UFRN\MATÉRIAS\LP1\LISTA-1-BRAYANLEO1\NEGATIVOS5\BUILD\CMAKEFILES\C5F1545F82393B3BD208CA654F10DA62\VERIFY.RULE
+setlocal
+python3 C:/Users/Brayan/Desktop/Brayan/UFRN/Matérias/LP1/lista-1-brayanleo1/negativos5/../scripts/verify-inputs.py ./DEBUG/program
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\BRAYAN\DESKTOP\BRAYAN\UFRN\MATÉRIAS\LP1\LISTA-1-BRAYANLEO1\NEGATIVOS5\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Brayan/Desktop/Brayan/UFRN/Matérias/LP1/lista-1-brayanleo1/negativos5 -BC:/Users/Brayan/Desktop/Brayan/UFRN/Matérias/LP1/lista-1-brayanleo1/negativos5/build --check-stamp-file C:/Users/Brayan/Desktop/Brayan/UFRN/Matérias/LP1/lista-1-brayanleo1/negativos5/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

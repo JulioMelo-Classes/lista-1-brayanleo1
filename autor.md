@@ -2,14 +2,14 @@
 
 Preencha os dados abaixo para identificar a autoria do trabalho.
 
-- Nome: *\<Brayan Leohandsen Leão da Silva>*
-- Email: *\<bleogalaxy@gmail.com>*
-- Turma: *\<T01>*
+- Nome: Brayan Leohandsen Leão da Silva
+- Email: bleogalaxy@gmail.com
+- Turma: T01
 
 # Questões Finalizadas
 
-- [ ] Negativos 5
-- [ ] Soma Vizinhos
+- [X] Negativos 5
+- [X] Soma Vizinhos
 - [ ] Intervalos
 - [ ] Fibonacci
 - [ ] Minmax

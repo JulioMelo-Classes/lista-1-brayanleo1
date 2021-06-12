@@ -14,23 +14,29 @@ int main( void )
     int n;
     int r;
 
-    std::cin >> std::ws >> m;
-    std::cin >> std::ws >> n;
-    r = m;
+    while (std::cin >> std::ws >> m >> n) {
 
-    while(n != 0) {
-        if(n > 0) {
-            m = m + 1;
-            r = r + m;
-            n = n - 1;
+        if(n == 0) {
+            r = m;
         } else {
-            m = m - 1;
-            r = r + m;
-            n = n + 1;
+            r = 0;
         }
-    }
 
-    std::cout << r << '\n';
+        while(n != 0) {
+            if(n > 0) {
+                r = r + m;
+                m = m + 1;
+                n = n - 1;
+            } else {
+                r = r + m;
+                m = m - 1;
+                n = n + 1;
+            } 
+        }
+
+        std::cout << r << endl;
+
+    }
 
     return 0;
 }

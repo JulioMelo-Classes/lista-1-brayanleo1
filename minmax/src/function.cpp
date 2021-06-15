@@ -12,26 +12,36 @@
 
 std::pair<int,int> min_max( int V[], std::size_t n )
 {
-    pair<int, int> min_maxP;
+    std::pair<int, int> min_maxP;
 
-    int min = V[0];
-    int max = V[0];
+    if(n == 1) {
+        min_maxP.first = 0;
+        min_maxP.second = 0;
+    } else if (n > 1) {
+        int min = V[0];
+        int max = V[0];
+        int pMin = 0;
+        int pMax = 0;
 
-    int c = 1;
+        int c = 1;
 
-    while(c != n) {
-        if(V[c] < min) {
-            min = V[c];
+        while(c < n) {
+            if(V[c] < min) {
+                min = V[c];
+                pMin = c;
+            }
+
+            if(V[c] >= max) {
+                max = V[c];
+                pMax = c;
+            } 
+            c = c + 1;
         }
 
-        if(V[c] > max) {
-            max = V[c];
-        }
-        c = c + 1;
+        min_maxP.first = pMin;
+        min_maxP.second = pMax;
+
     }
-
-    min_maxP.first = min;
-    min_maxP.second = max;
 
     return min_maxP;
 }

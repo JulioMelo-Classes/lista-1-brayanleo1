@@ -7,10 +7,12 @@ std::vector<unsigned int> fib_below_n( unsigned int n )
         f.push_back(1);
         f.push_back(1);
         int p = 1;
-        while ((f[(p-1)] + f[p]) < n)
+        int u = 1;
+        while ((p + u) < n)
         {
-            p = p + 1;
-            f.push_back((f[(p-1)] + f[p]));
+            f.push_back((p + u));
+            p = u;
+            u = f.back();
         }
         
     }

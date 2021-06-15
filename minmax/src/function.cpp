@@ -13,8 +13,11 @@
 std::pair<int,int> min_max( int V[], std::size_t n )
 {
     std::pair<int, int> min_maxP;
-
-    if(n == 1) {
+    if (n == 0) {
+        min_maxP.first = -1;
+        min_maxP.second = -1;
+    }
+    else if(n == 1) {
         min_maxP.first = 0;
         min_maxP.second = 0;
     } else if (n > 1) {

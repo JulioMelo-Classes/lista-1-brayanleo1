@@ -6,8 +6,19 @@
 
 location_t pt_in_rect( const Ponto &IE, const Ponto &SD, const Ponto &P )
 {
-    // TODO: Coloque aqui seu código.
+    int l = 0;
 
-    // TODO: Substitua o retorno conforme desejar. Isso é apenas um STUB, usado apenas para compilar.
-    return location_t::OUTSIDE;
+    if(P.x == IE.x || P.x == SD.x || P.y == IE.y || P.y == SD.y) {
+        l = 1;
+    } else if (P.x > IE.x && P.x < SD.x && P.y > IE.y && P.y < SD.y) {
+        l = 2;
+    }
+
+    if(l == 0) {
+        return location_t::OUTSIDE;
+    } else if (l == 1) {
+        return location_t::BORDER;
+    } else {
+        return location_t::INSIDE;
+    }
 }

@@ -3,7 +3,7 @@ using std::cin;
 using std::cout;
 
 const int SIZE = 5; // input size.
-
+/*easy!*/
 int main(void)
 {
     int c = 0;

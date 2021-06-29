@@ -4,10 +4,13 @@ using std::string;
 #include <iterator>
 using std::iter_swap;
 
+#include <array>
+
 /*! 
  * Reverse de order of elements inside the array.
  * @param arr Reference to the array with the values.
  */
+ /*não se usa iterswap dessa forma, vc poderia fazer com swap*/
 template <size_t SIZE>
 void reverse( std::array< std::string, SIZE > & arr )
 {

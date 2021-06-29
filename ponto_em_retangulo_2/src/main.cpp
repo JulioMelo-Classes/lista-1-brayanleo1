@@ -18,7 +18,7 @@ using std::max;
 
 // Coloque aqui qualquer função auxiliar que desejar.
 
-
+/*aqui era só usar o que fez na questão anterior...*/
 int main(void)
 {
     // TODO: Adicione aqui seu código.

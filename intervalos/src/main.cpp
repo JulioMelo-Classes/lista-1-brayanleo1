@@ -12,7 +12,7 @@ using std::endl;
 using std::setprecision;
 
 // Se desejar, crie funções aqui, antes do main().
-
+/*blz, sem vetores, muito bom!*/
 int main(void)
 {
     int x;
